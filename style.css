@@ -1,0 +1,73 @@
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+main {
+    width: 80%;
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-areas:
+        "purple purple gray white-t"
+        "white-s dark dark white-t";
+    gap: 20px;
+}
+
+.card {
+    border: 2px solid red;
+    padding: 40px;
+}
+
+#purple {
+    grid-area: purple;
+    background-color: purple;
+}
+
+#gray {
+    grid-area: gray;
+    background-color: gray;
+}
+
+#white-s {
+    grid-area: white-s;
+    background-color: white;
+}
+
+#dark {
+    grid-area: dark;
+    background-color: black;
+}
+
+#white-t {
+    grid-area: white-t;
+    background-color: white;
+}
+
+@media (max-width: 600px)
+{
+    /* Re-do grid area for mobile */
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr); 
+        grid-template-areas:
+            "purple"
+            "gray"
+            "white-s"
+            "dark"
+            "white-t"; 
+    }
+}
