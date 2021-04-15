@@ -13,8 +13,30 @@
     box-sizing: border-box;
 }
 
+:root {
+
+    font-size: 10px;
+
+    /* Primary Colors */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --custom-White: hsl(0, 0%, 100%);
+
+    /* Neutral Colors */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-gray-fifty: hsla(0, 0%, 81%, 50%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+
+body {
+    background: var(--light-grayish-blue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
 
 
+/* Main grid layout */
 main {
     width: 80%;
     margin: 5% auto;
@@ -24,37 +46,83 @@ main {
     grid-template-areas:
         "purple purple gray white-t"
         "white-s dark dark white-t";
-    gap: 20px;
+    gap: 25px;
 }
 
+/* Common properties for each card */
 .card {
-    border: 2px solid red;
-    padding: 40px;
+    min-height: 280px;
+    border-radius: 2%;
+    padding: 2.5rem;
+}
+
+/* Heading includes image, name, and title */
+.heading {
+    display: flex;
+    align-items: center;
+    line-height: .5rem;
+}
+
+/* styling for the user icon */
+.heading-img img {
+    border-radius: 50%;
+    border: 2px solid var(--light-gray-fifty);
+    width: 60%;
+}
+
+/* The name in the heading */
+.heading-title p:first-child {
+    color: var(--light-gray);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+/* The verified grad in the heading */
+.heading-title p:last-child
+{
+    color: var(--light-gray-fifty);
+    font-size: 1.3rem;
+}
+
+/* Bolded overview comment */
+.overview {
+    color: var(--custom-White);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+/* And finally the quote */
+.quote {
+    color: var(--light-gray-fifty);
+    font-size: 1.3rem;
 }
 
 #purple {
     grid-area: purple;
-    background-color: purple;
+    background-color: var(--moderate-violet);
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 85% 0;
 }
 
 #gray {
     grid-area: gray;
-    background-color: gray;
+    background-color: var(--very-dark-grayish-blue);
 }
 
 #white-s {
     grid-area: white-s;
-    background-color: white;
+    background-color: var(--custom-White);
 }
 
 #dark {
     grid-area: dark;
-    background-color: black;
+    background-color: var(--very-dark-blackish-blue);
 }
 
 #white-t {
     grid-area: white-t;
-    background-color: white;
+    background-color: var(--custom-White);
 }
 
 @media (max-width: 600px)
