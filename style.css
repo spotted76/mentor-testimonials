@@ -52,7 +52,7 @@ main {
 
 /* Common properties for each card */
 .card {
-    min-height: 280px;
+    /* min-height: 280px; */
     border-radius: 2%;
     padding: 2.5rem;
 }
@@ -152,7 +152,7 @@ main {
     /* Re-do grid area for mobile */
     main {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr); 
+        grid-template-rows: auto;
         grid-template-areas:
             "purple"
             "gray"
