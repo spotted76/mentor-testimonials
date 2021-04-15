@@ -20,6 +20,7 @@
     /* Primary Colors */
     --moderate-violet: hsl(263, 55%, 52%);
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-grayish-blue-fifty: hsla(217, 19%, 35%, 50%);
     --very-dark-blackish-blue: hsl(219, 29%, 14%);
     --custom-White: hsl(0, 0%, 100%);
 
@@ -84,6 +85,18 @@ main {
     font-size: 1.3rem;
 }
 
+.negative .heading-img img {
+    border: 2px solid var(--very-dark-grayish-blue-fifty);
+}
+
+.negative .heading-title p:first-child {
+    color: var(--very-dark-grayish-blue);
+}
+
+.negative .heading-title p:last-child {
+    color: var(--very-dark-grayish-blue-fifty);
+}
+
 /* Bolded overview comment */
 .overview {
     color: var(--custom-White);
@@ -95,6 +108,15 @@ main {
 .quote {
     color: var(--light-gray-fifty);
     font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.negative .overview {
+    color: var(--very-dark-grayish-blue);
+}
+
+.negative .quote {
+    color: var(--very-dark-grayish-blue-fifty);
 }
 
 #purple {
