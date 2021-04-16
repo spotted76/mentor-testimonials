@@ -119,6 +119,10 @@ main {
     color: var(--very-dark-grayish-blue-fifty);
 }
 
+.negative {
+    box-shadow: 2px 2px 20px 2px var(--light-gray-fifty);
+}
+
 #purple {
     grid-area: purple;
     background-color: var(--moderate-violet);
